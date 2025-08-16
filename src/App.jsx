@@ -228,10 +228,10 @@ function App() {
       <section className="hero-section min-h-screen flex items-center justify-center text-white relative">
         <div className="text-center z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Desfile - 7 de setembro
+            Desfile de 7 de Setembro
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Uma tarde inesquecível de amor, diversão e memórias especiais com quem você mais ama!
+            É com grande alegria que convidamos toda a nossa comunidade escolar a participar do tradicional Desfile Cívico em comemoração à independência do Brasil.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -246,11 +246,11 @@ function App() {
           <div className="mt-12 flex justify-center items-center space-x-8 text-sm">
             <div className="flex items-center">
               <Calendar className="h-5 w-5 mr-2" />
-              16 de Agosto de 2025 - a partir das 14h
+              14 de Setembro de 2025 - a partir das 13h
             </div>
             <div className="flex items-center">
               <MapPin className="h-5 w-5 mr-2" />
-              Na Escola Amadeus, São Gonçalo do Amarante - RN
+              Percurso: Rua Arari até Av. Maranhão - São Gonçalo do Amarante - RN
             </div>
           </div>
         </div>
@@ -260,15 +260,15 @@ function App() {
       <section id="sobre" className="section-padding bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Sobre o Evento</h2>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">Tema do Desfile</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Um momento único para criar memórias especiais ao lado de quem mais importa. Venha viver uma tarde repleta de diversão, competições e muito carinho em um ambiente pensado especialmente para celebrar o amor entre pais e filhos.
+              <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Uma Experiência Única</h3>
+              <h3 className="text-2xl font-semibold mb-6">Trajes e Bonificações</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
@@ -857,6 +857,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
