@@ -146,5 +146,30 @@
   background-clip: text;
 }
 
+/* Estilos para validação de CPF */
+.border-red-500 {
+  border-color: #ef4444 !important;
+}
+
+.bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+
+.border-green-500 {
+  border-color: #22c55e !important;
+}
+
+.bg-green-50 {
+  background-color: #f0fdf4 !important;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-green-600 {
+  color: #16a34a;
+}
+
 
 
