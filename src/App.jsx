@@ -335,20 +335,40 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Trajes e Bonificação</h2>
             <p className="text-lg text-muted-foreground">
+              Confira as opções de trajes e suas respectivas bonificações
             </p>
           </div>
 
           <div className="mt-8 p-6 bg-accent/10 rounded-lg border border-accent/20">
-            <div className="flex items-start space-x-3">
-              {/* <Heart className="h-6 w-6 text-accent mt-1" /> */}
-              <div>
-                <h4 className="font-semibold text-accent mb-2"></h4>
-                <p className="text-sm">
-                  <strong>Fantasia à escolha (de acordo com o tema da sala):</strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas.
-                  <strong>Fardamento completo:</strong> Bonificação de <strong>2,0 pontos</strong>, a ser distribuída em uma ou duas disciplinas. Ala no disfile: Alunos de Farda
-                  <strong>Opção especial (esporte):</strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. Para alunos que participam de algum esporte (Ballet, Karatê, Futsal ou Handebol) - e queira ir de terno (da escola), no entanto, a FANTASIA será usada em novembro, onde acontecerá a culminância do evento. 
-                </p>
+            <div className="space-y-4">
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="text-sm">
+                    <strong>Fantasia à escolha (de acordo com o tema da sala):</strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. Ala no desfile: Alunos de fantasia 
+                  </p>
+                </div>
               </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="text-sm">
+                    <strong>Fardamento completo:</strong> Bonificação de <strong>2,0 pontos</strong>, a ser distribuída em uma ou duas disciplinas. Ala no disfile: Alunos de Farda
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="text-sm">
+                    <strong>Esporte: terno ou fantasia:</strong> </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet ou Karatê).
+                  </p>
+                </div>
+              </div>
+          
             </div>
           </div>
         </div>
@@ -834,6 +854,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
