@@ -605,6 +605,7 @@ function App() {
                             <option value="9º Ano">9º Ano</option>
                           </select>
                         </div>
+                        {/* 
                         <div>
                           <Label htmlFor="studentClass">Turma do Aluno *</Label>
                           <Input
@@ -616,6 +617,23 @@ function App() {
                             placeholder="Ex: A, B, C"
                           />
                         </div>
+                        Dados do Aluno */}
+                        <div>
+                          <Label htmlFor="studentClass">Turma do Aluno *</Label>
+                          <select
+                            id="studentClass"
+                            name="studentClass"
+                            value={formData.studentClass}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm"
+                          >
+                            <option value="">Selecione a turma</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                          </select>
+                        </div>                       
                       </div>
                     </div>
                   </div>
@@ -924,6 +942,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
