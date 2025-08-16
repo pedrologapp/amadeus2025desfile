@@ -392,7 +392,7 @@ function App() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Bandad convidadas;
+                      Bandas convidadas;
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
@@ -703,7 +703,7 @@ function App() {
                           <div>
                             <div className="flex items-center space-x-2">
                               <span className="text-sm">💳</span>
-                              <span className="text-sm font-medium">Cartão de Crédito (até 2x)</span>
+                              <span className="text-sm font-medium">Cartão de Crédito</span>
                             </div>
                             <div className="text-xs text-gray-600 ml-6">                        
                             </div>
@@ -821,6 +821,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
