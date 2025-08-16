@@ -45,8 +45,7 @@ function App() {
     email: '',
     phone: '',
     paymentMethod: 'pix',
-    installments: 1,
-    additionalCompanions: 0 // Novo campo para acompanhantes adicionais
+    installments: 1
   });
   const [isProcessing, setIsProcessing] = useState(false);
   const [inscriptionSuccess, setInscriptionSuccess] = useState(false);
@@ -67,7 +66,7 @@ function App() {
   const calculatePrice = () => {
     const PRECO_BASE = 20.0;
     
-    let valorTotal = PRECO_BASE + (formData.additionalCompanions * PRECO_ACOMPANHANTE);
+    let valorTotal = PRECO_BASE;
     
     if (formData.paymentMethod === 'credit') {
       let taxaPercentual = 0;
@@ -129,7 +128,6 @@ function App() {
           phone: formData.phone,
           paymentMethod: formData.paymentMethod,
           installments: formData.installments,
-          additionalCompanions: formData.additionalCompanions, // Incluir acompanhantes
           amount: valorTotal,
           timestamp: new Date().toISOString(),
           event: 'Passeio Game Station Partage'
@@ -739,11 +737,6 @@ function App() {
                             {formData.installments}x de R$ {valorParcela.toFixed(2).replace('.', ',')}
                           </div>
                         )}
-                        {formData.additionalCompanions > 0 && (
-                          <div className="text-xs text-orange-600 mt-2 border-t border-orange-200 pt-2">
-                            <div>Pagamento único: R$ 20,00</div>
-                            </div>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -828,6 +821,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
