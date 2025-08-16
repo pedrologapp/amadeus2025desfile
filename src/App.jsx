@@ -63,25 +63,6 @@ function App() {
     }, 100);
   };
 
-  // Funções para controlar acompanhantes
-  const increaseCompanions = () => {
-    if (formData.additionalCompanions < 5) {
-      setFormData(prev => ({ 
-        ...prev, 
-        additionalCompanions: prev.additionalCompanions + 1 
-      }));
-    }
-  };
-
-  const decreaseCompanions = () => {
-    if (formData.additionalCompanions > 0) {
-      setFormData(prev => ({ 
-        ...prev, 
-        additionalCompanions: prev.additionalCompanions - 1 
-      }));
-    }
-  };
-
   // Cálculo de preço atualizado
   const calculatePrice = () => {
     const PRECO_BASE = 20.0;
@@ -699,7 +680,7 @@ function App() {
                           <div className="flex items-center space-x-2">
                             <span className="text-lg font-bold">PIX</span>
                             <span className="text-sm">
-                              R$ {(70 + (formData.additionalCompanions * 20)).toFixed(2).replace('.', ',')} (sem taxas)
+                              R$ {(20).toFixed(2).replace('.', ',')} (sem taxas)
                             </span>
                           </div>
                         </div>
@@ -847,6 +828,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
