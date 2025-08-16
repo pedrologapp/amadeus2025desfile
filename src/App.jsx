@@ -28,7 +28,10 @@ import {
   Minus,
   UserPlus
 } from 'lucide-react';
-
+// Importando as imagens
+import interiorImage1 from './assets/gamestation1.jpg';
+import interiorImage2 from './assets/gamestation2.jpg';
+import jardimImage from './assets/gamestation3.jpg';
 
 function App() {
   // Estados para o formulário
@@ -828,6 +831,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
