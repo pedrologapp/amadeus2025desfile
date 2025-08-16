@@ -130,7 +130,7 @@ function App() {
           installments: formData.installments,
           amount: valorTotal,
           timestamp: new Date().toISOString(),
-          event: 'Passeio Game Station Partage'
+          event: 'Amadeus-Desfile7setembro'
         })
       });
 
@@ -821,6 +821,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
