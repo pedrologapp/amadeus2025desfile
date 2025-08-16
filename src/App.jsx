@@ -301,7 +301,27 @@ function App() {
               </div>
             </div>
           </div>
-                */}
+        */}
+        </div>
+      </section>
+
+            {/* Sobre o Passeio */}
+      <section id="sobre" className="section-padding bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 gradient-text">Tema do Desfile</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+               <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <img src={interiorImage1} alt="Interior do Instituto" className="rounded-lg shadow-lg h-48 w-full object-cover" />
+              <img src={interiorImage2} alt="Coleções do Instituto" className="rounded-lg shadow-lg h-48 w-full object-cover" />
+              <img src={jardimImage} alt="Jardins do Instituto" className="rounded-lg shadow-lg col-span-2 h-64 w-full object-cover" />
+            </div>
+          </div>
         </div>
       </section>
       
@@ -858,6 +878,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
