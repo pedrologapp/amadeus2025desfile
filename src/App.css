@@ -121,7 +121,7 @@
 
 /* Estilos customizados para o site do passeio */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/desfile.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/gamestation.png');
   background-size: cover;
   background-position: center;
   background-attachment: no-repeat;
@@ -145,4 +145,5 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 
