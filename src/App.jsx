@@ -265,7 +265,7 @@ function App() {
               <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
             </p>
           </div>
-          
+            {/*
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Trajes e Bonificações</h3>
@@ -301,9 +301,10 @@ function App() {
               </div>
             </div>
           </div>
+                */}
         </div>
       </section>
-
+      
       {/* Itinerário */}
       <section id="itinerario" className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-6xl">
@@ -857,6 +858,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
