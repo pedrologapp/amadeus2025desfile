@@ -421,11 +421,11 @@ function App() {
                     </li>
                     <li className="flex items-start">
                       <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      Cada <strong> aluno </strong> deve desfilar acompanhado de um responsável;
+                      Cada  <strong> aluno </strong>  deve desfilar acompanhado de um responsável;
                     </li>
                     <li className="flex items-start">
                       <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      <strong>Alimentação: </strong> não será permitido oferecer alimentos durante o percurso (a não ser que haja alguma emergência). Os alunos poderão levar apenas garrafas com água. 
+                      <strong> Alimentação: </strong> não será permitido oferecer alimentos durante o percurso (a não ser que haja alguma emergência). Os alunos poderão levar apenas garrafas com água. 
                     </li>
                   </ul>
                 </div>
@@ -821,6 +821,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
