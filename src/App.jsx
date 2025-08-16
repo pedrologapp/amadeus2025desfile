@@ -265,56 +265,6 @@ function App() {
               <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
             </p>
           </div>
-            {/*
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Trajes e Bonificações</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Evento exclusivo para nossa comunidade escolar</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Competição Pais & Filhos - Reversamento de obstáculos, brincadeiras e muito mais!</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Cabine de fotos temáticas </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Entrega de medalhas - para os participantes</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Lembracinha especial para cada pai presente</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Pipoca e Algodão-doce à vontade</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
-                  <p>Decoração para o dia dos pais</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        */}
-        </div>
-      </section>
-
-            {/* Sobre o Passeio */}
-      <section id="sobre" className="section-padding bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gradient-text">Tema do Desfile</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-               <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
               <img src={interiorImage1} alt="Interior do Instituto" className="rounded-lg shadow-lg h-48 w-full object-cover" />
@@ -878,6 +828,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
