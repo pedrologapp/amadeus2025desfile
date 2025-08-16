@@ -29,9 +29,9 @@ import {
   UserPlus
 } from 'lucide-react';
 // Importando as imagens
-import interiorImage1 from './assets/gamestation1.jpg';
-import interiorImage2 from './assets/gamestation2.jpg';
-import jardimImage from './assets/gamestation3.jpg';
+import interiorImage1 from './assets/desfile1.jpg';
+import interiorImage2 from './assets/desfile2.jpg';
+import jardimImage from './assets/desfile3.jpg';
 
 function App() {
   // Estados para o formulário
@@ -84,8 +84,7 @@ function App() {
 
   // Cálculo de preço atualizado
   const calculatePrice = () => {
-    const PRECO_BASE = 70.0;
-    const PRECO_ACOMPANHANTE = 20.0;
+    const PRECO_BASE = 20.0;
     
     let valorTotal = PRECO_BASE + (formData.additionalCompanions * PRECO_ACOMPANHANTE);
     
@@ -364,7 +363,16 @@ function App() {
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <p className="text-sm">
-                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet ou Karatê).
+                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet, Karatê, Futsal ou Handbol).
+                  </p>
+                </div>
+              </div>
+
+               <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="text-sm">
+                    <strong>Recomendação:</strong> prefiram tecidos com brilho (lamê brocado, tule) e espuma de 3 mm para garantir leveza e destaque. Verificar sugestôes com os professores.
                   </p>
                 </div>
               </div>
@@ -379,22 +387,24 @@ function App() {
       <section id="custos" className="section-padding bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Custos e Pagamento</h2>
+            <h2 className="text-4xl font-bold mb-4">Inscrição e Taxa</h2>
             <p className="text-lg text-muted-foreground">
-              Valor único para uma tarde inesquecível em família
+              Valor único por Aluno
             </p>
           </div>
 
           <Card className="mb-8">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl text-primary">R$ 70,00</CardTitle>
-              <CardDescription>por aluno (inclui pai, mãe e filho)</CardDescription>
+              <CardTitle className="text-3xl text-primary">R$ 20,00</CardTitle>
+              <CardDescription>por aluno</CardDescription>
+              {/* 
               <div className="mt-4 p-3 bg-blue-50 rounded-lg">
                 <p className="text-sm text-blue-800">
                   <UserPlus className="inline h-4 w-4 mr-1" />
                   <strong>Acompanhantes adicionais:</strong> R$ 20,00 cada 
                 </p>
               </div>
+             */}
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
@@ -403,35 +413,23 @@ function App() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Todas as atividades e competições
+                      Bandad convidadas;
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Lembrancinha especial para cada pai
+                      Banners;
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Pipoca e algodão-doce à vontade
+                      Carro de som;
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Decoração e ambientação completa
+                      Insfraestrutura de apoio;
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Segurança e serviços de bombeiro civil
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      A mãe poderá participar ao lado do pai
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Cabine de fotos temáticas
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-accent mr-2" />
-                      Entrega de medalhas para os pais presentes
+                      Decoração do desfile.
                     </li>
                   </ul>
                 </div>
@@ -440,19 +438,15 @@ function App() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start">
                       <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      Pagamento obrigatório até 13 de agosto de 2025
+                      Pagamento obrigatório até 10 de setembro de 2025;
                     </li>
                     <li className="flex items-start">
                       <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      Aceita parcelamento em até 2x no cartão
+                      Cada <strong>aluno</strong> deve desfilar acompanhado de um responsável;
                     </li>
                     <li className="flex items-start">
                       <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      O não comparecimento do aluno no dia do evento, não acarretará em reembolso.
-                    </li>
-                    <li className="flex items-start">
-                      <Shield className="h-4 w-4 text-destructive mr-2 mt-0.5" />
-                      Lembrança e medalha, será somente para o pai. Os acompanhantes terão direito a fotos (juntamente com o pai), pipoca e algodão-doce, e claro, fazer parte desse dia especial junto à família.
+                      <strong>Alimentação:</strong> não será permitido oferecer alimentos durante o percurso (a não ser que haja alguma emergência). Os alunos poderão levar apenas garrafas com água. 
                     </li>
                   </ul>
                 </div>
@@ -621,7 +615,7 @@ function App() {
                     </div>
                   </div>
 
-                  {/* Seção de Acompanhantes Adicionais */}
+                  {/* Seção de Acompanhantes Adicionais 
                   <div>
                     <h3 className="text-lg font-semibold mb-4 flex items-center">
                       <UserPlus className="mr-2 h-5 w-5" />
@@ -680,7 +674,7 @@ function App() {
                       )}
                     </div>
                   </div>
-
+                  */}
                   {/* Método de Pagamento */}
                   <div>
                     <h3 className="text-lg font-semibold mb-4">Método de Pagamento*</h3>
@@ -748,7 +742,6 @@ function App() {
                           className="w-full h-10 px-3 rounded-md border border-input bg-background text-sm mt-2"
                         >
                           <option value={1}>1x de R$ {(valorTotal / 1).toFixed(2).replace('.', ',')}</option>
-                          <option value={2}>2x de R$ {(valorTotal / 2).toFixed(2).replace('.', ',')}</option>
                         </select>
                       </div>
                     )}
@@ -767,9 +760,8 @@ function App() {
                         )}
                         {formData.additionalCompanions > 0 && (
                           <div className="text-xs text-orange-600 mt-2 border-t border-orange-200 pt-2">
-                            <div>Pacote básico: R$ 70,00</div>
-                            <div>Acompanhantes adicionais ({formData.additionalCompanions}x): R$ {(formData.additionalCompanions * 20).toFixed(2).replace('.', ',')}</div>
-                          </div>
+                            <div>Pagamento único: R$ 20,00</div>
+                            </div>
                         )}
                       </div>
                     </div>
@@ -855,6 +847,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
