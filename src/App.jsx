@@ -268,8 +268,8 @@ function App() {
               <strong>"CONECTAMOS HOJE, ESCREVEREMOS O AMANHÃ"</strong>
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 gap-4 max-w-2xl">
               <img src={interiorImage1} alt="Interior do Instituto" className="rounded-lg shadow-lg h-48 w-full object-cover" />
               <img src={interiorImage2} alt="Coleções do Instituto" className="rounded-lg shadow-lg h-48 w-full object-cover" />
               <img src={jardimImage} alt="Jardins do Instituto" className="rounded-lg shadow-lg col-span-2 h-64 w-full object-cover" />
@@ -831,6 +831,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
