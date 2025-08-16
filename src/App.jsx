@@ -284,7 +284,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Programação do Evento</h2>
             <p className="text-lg text-muted-foreground">
-              Confira o cronograma da nossa tarde especial
+              Confira o cronograma do nosso desfile
             </p>
           </div>
 
@@ -294,12 +294,12 @@ function App() {
                 <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle>14:00</CardTitle>
-                <CardDescription>Chegada e recepção</CardDescription>
+                <CardTitle>13:00</CardTitle>
+                <CardDescription>Horário</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-center">
-                  Chegada das famílias na escola Amadeus. Recepção com pipoca e algodão-doce para começar a festa!
+                  Horário de concentração, no Centro Educacional Amadeus
                 </p>
               </CardContent>
             </Card>
@@ -308,23 +308,24 @@ function App() {
                 <div className="mx-auto mb-4 p-3 bg-accent/10 rounded-full w-fit">
                   <MapPin className="h-8 w-8 text-accent" />
                 </div>
-                <CardTitle>Tarde</CardTitle>
-                <CardDescription>Atividades e diversão</CardDescription>
+                <CardTitle>Percurso</CardTitle>
+                {/*   <CardDescription>Atividades e diversão</CardDescription>  */}
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-center">
-                  Competições pais & filhos, cabine de fotos, entrega de medalhas e muita alegria em família no nosso espaço reservado.
+                  Rua Arari - Rua Cururupu - Rua Carolina - Avenida Maranhão (Encerramento com o Hino Nacional)
                 </p>
               </CardContent>
             </Card>
           </div>
-
+           {/*
           <div className="mt-12 text-center">
             <div className="inline-flex items-center space-x-2 bg-white p-4 rounded-lg shadow-sm">
               <Bus className="h-5 w-5 text-primary" />
               <span className="font-medium">Término previsto às 17:00</span>
             </div>
           </div>
+          */}
         </div>
       </section>
 
@@ -332,18 +333,20 @@ function App() {
       <section id="documentacao" className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Observação</h2>
+            <h2 className="text-4xl font-bold mb-4">Trajes e Bonificação</h2>
             <p className="text-lg text-muted-foreground">
             </p>
           </div>
 
           <div className="mt-8 p-6 bg-accent/10 rounded-lg border border-accent/20">
             <div className="flex items-start space-x-3">
-              <Heart className="h-6 w-6 text-accent mt-1" />
+              {/* <Heart className="h-6 w-6 text-accent mt-1" /> */}
               <div>
                 <h4 className="font-semibold text-accent mb-2"></h4>
                 <p className="text-sm">
-                  A mãe poderá participar ao lado do pai, tornando o dia ainda mais completo!
+                  <strong>Fantasia à escolha (de acordo com o tema da sala):</strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas.
+                  <strong>Fardamento completo:</strong> Bonificação de <strong>2,0 pontos</strong>, a ser distribuída em uma ou duas disciplinas. Ala no disfile: Alunos de Farda
+                  <strong>Opção especial (esporte):</strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. Para alunos que participam de algum esporte (Ballet, Karatê, Futsal ou Handebol) - e queira ir de terno (da escola), no entanto, a FANTASIA será usada em novembro, onde acontecerá a culminância do evento. 
                 </p>
               </div>
             </div>
@@ -831,6 +834,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
