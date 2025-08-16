@@ -49,6 +49,40 @@ function App() {
   });
   const [isProcessing, setIsProcessing] = useState(false);
   const [inscriptionSuccess, setInscriptionSuccess] = useState(false);
+  
+  // Estados para validação de CPF
+  const [cpfError, setCpfError] = useState('');
+  const [cpfValid, setCpfValid] = useState(false);
+
+  // Função para validar CPF
+  const validarCPF = (cpf) => {
+    cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
+    
+    if (cpf.length !== 11) return false;
+    if (/^(\d)\1{10}$/.test(cpf)) return false; // CPF com todos dígitos iguais
+    
+    let soma = 0;
+    let resto;
+    
+    // Primeiro dígito verificador
+    for (let i = 1; i <= 9; i++) {
+      soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+    }
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf.substring(9, 10))) return false;
+    
+    // Segundo dígito verificador
+    soma = 0;
+    for (let i = 1; i <= 10; i++) {
+      soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+    }
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf.substring(10, 11))) return false;
+    
+    return true;
+  };
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -93,22 +127,64 @@ function App() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     
-      // Aplicar máscara de CPF
+    // Aplicar máscara de CPF
     if (name === 'cpf') {
       const cpfValue = value
         .replace(/\D/g, '') // Remove tudo que não é dígito
         .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona primeiro ponto
         .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona segundo ponto
         .replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona hífen
-    
+
       setFormData(prev => ({ ...prev, [name]: cpfValue }));
+      
+      // Validação em tempo real do CPF
+      const cpfSemMascara = cpfValue.replace(/[^\d]/g, '');
+      
+      if (cpfSemMascara.length === 0) {
+        setCpfError('');
+        setCpfValid(false);
+      } else if (cpfSemMascara.length < 11) {
+        setCpfError('CPF deve ter 11 dígitos');
+        setCpfValid(false);
+      } else if (cpfSemMascara.length === 11) {
+        if (validarCPF(cpfSemMascara)) {
+          setCpfError('');
+          setCpfValid(true);
+        } else {
+          setCpfError('CPF inválido. Verifique os números digitados.');
+          setCpfValid(false);
+        }
+      }
     } else {
       setFormData(prev => ({ ...prev, [name]: value }));
     }
   };
 
+  // Função de validação antes do submit
+  const validateForm = () => {
+    const cpfSemMascara = formData.cpf.replace(/[^\d]/g, '');
+    
+    if (!cpfSemMascara || cpfSemMascara.length !== 11) {
+      alert('Por favor, preencha um CPF válido.');
+      return false;
+    }
+    
+    if (!validarCPF(cpfSemMascara)) {
+      alert('CPF inválido. Verifique os números digitados.');
+      return false;
+    }
+    
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validar formulário antes de enviar
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsProcessing(true);
 
     try {  
@@ -138,6 +214,13 @@ function App() {
           // Pegar a resposta do n8n PRIMEIRO
           const responseData = await response.json();
           console.log('Resposta do n8n:', responseData); // Para debug
+          
+          // Verificar se houve erro retornado pelo n8n
+          if (responseData.success === false) {
+            alert(responseData.message || 'Erro ao processar dados. Tente novamente.');
+            return;
+          }
+          
           // Mostrar tela de sucesso
         setInscriptionSuccess(true);
   
@@ -151,7 +234,8 @@ function App() {
           }
         }, 1000);
       } else {
-        throw new Error('Erro ao enviar dados para o servidor');
+        const errorData = await response.json();
+        alert(errorData.message || 'Erro ao enviar dados para o servidor');
       }
     } catch (error) {
       console.error('Erro:', error);
@@ -581,14 +665,33 @@ function App() {
                         <div>
                           <Label htmlFor="cpf">CPF do Responsável *</Label>
                           <Input
-                          id="cpf"
-                          name="cpf"
-                          value={formData.cpf}
-                          onChange={handleInputChange}
-                          required
-                          placeholder="000.000.000-00"
-                          maxLength="14"
-                        />
+                            id="cpf"
+                            name="cpf"
+                            value={formData.cpf}
+                            onChange={handleInputChange}
+                            required
+                            placeholder="000.000.000-00"
+                            maxLength="14"
+                            className={`${
+                              formData.cpf && cpfError 
+                                ? 'border-red-500 bg-red-50' 
+                                : formData.cpf && cpfValid 
+                                ? 'border-green-500 bg-green-50' 
+                                : ''
+                            }`}
+                          />
+                          {cpfError && (
+                            <p className="text-red-500 text-sm mt-1 flex items-center">
+                              <span className="mr-1">⚠️</span>
+                              {cpfError}
+                            </p>
+                          )}
+                          {cpfValid && !cpfError && (
+                            <p className="text-green-600 text-sm mt-1 flex items-center">
+                              <span className="mr-1">✅</span>
+                              CPF válido
+                            </p>
+                          )}
                         </div>
                       </div>
                     </div>
