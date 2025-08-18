@@ -426,7 +426,7 @@ function App() {
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <p className="text-sm">
-                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet, Karatê, Futsal ou Handbol).
+                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet, Karatê, Futsal ou Handbol).Lembrando que o terno sera usado novamente na culminancia do projeto em novembro.
                   </p>
                 </div>
               </div>
