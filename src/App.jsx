@@ -426,11 +426,20 @@ function App() {
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <p className="text-sm">
-                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet, Karatê, Futsal ou Handbol).Lembrando que o terno sera usado novamente na culminancia do projeto em novembro.
+                    <strong>Esporte: terno ou fantasia: </strong> Bonificação de <strong>1,0 ponto</strong> em todas as disciplinas. O aluno irá de terno ou de fantasia do esporte (Ballet, Karatê, Futsal ou Handbol).
                   </p>
                 </div>
               </div>
 
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p className="text-sm">
+                    <strong>Lembrando:</strong> A fantasia será usada novamente na culminancia do projeto em novembro.
+                  </p>
+                </div>
+              </div>
+              
                <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
@@ -943,6 +952,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
