@@ -804,7 +804,7 @@ function App() {
                           </div>
                         </div>
                       </div>
-
+                      {/*
                       <div 
                         className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
                           formData.paymentMethod === 'credit' 
@@ -831,6 +831,7 @@ function App() {
                           </div>
                         </div>
                       </div>
+                      */}
                     </div>
 
                     {formData.paymentMethod === 'credit' && (
@@ -942,6 +943,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
